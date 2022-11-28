@@ -27,7 +27,7 @@ public class ExperienciaController {
 
    
 
-    /*@PreAuthorize("hasRole('ADMIN')")*/
+ 
     @PutMapping("/update")
     public ResponseEntity<Experiencia> editarExperiencia(@RequestBody Experiencia experiencia){
         Experiencia updateExperiencia = experienciaService.editarExperiencia(experiencia);
@@ -40,7 +40,7 @@ public class ExperienciaController {
         return new ResponseEntity<>(experiencias, HttpStatus.OK);
     }
 
-    //@PreAuthorize("hasRole('ADMIN')")
+   
     @PostMapping("/add")
     public ResponseEntity<Experiencia> crearExperiencia(@RequestBody Experiencia experiencia){
         Experiencia nuevaExperiencia=experienciaService.addExperiencia(experiencia);

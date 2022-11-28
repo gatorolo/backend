@@ -2,7 +2,6 @@
 package com.proyecto1.demo.Services;
 
 import com.proyecto1.demo.Entity.About;
-import com.proyecto1.demo.Exception.UserNotFoundException;
 import com.proyecto1.demo.Repository.AboutRepo;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,14 +26,8 @@ public class AboutService {
     public About editarAbout(About about){
         return aboutRepo.save(about);
     }
-    public void borrarAbout(Long idAb){
-           aboutRepo.deleteById(idAb);
+    public void borrarAbout(Long id){
+           aboutRepo.deleteById(id);
     }
     
-    public About buscarAboutPorId(Long idAb){
-        return aboutRepo.findById(idAb).orElseThrow(() -> new UserNotFoundException("no encontrado"));
-    }
-
-  
-
 }

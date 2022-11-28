@@ -9,6 +9,7 @@ import com.proyecto1.demo.Services.AboutService;
 import java.util.List;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -32,10 +33,10 @@ public class AboutController {
         return new ResponseEntity<>(updateAbout, HttpStatus.OK);
     }
 
-    @GetMapping("/id/{idAb}")
-    public ResponseEntity<About> obtenerAbout(@PathVariable("idAb") Long id){
-        About about = aboutService. buscarAboutPorId(id);
-        return new ResponseEntity<>(about, HttpStatus.OK);
+    @GetMapping("/all")
+    public ResponseEntity<List<About>> getAbout(){
+        List<About> abouts = aboutService.buscarAbout();
+       return new ResponseEntity<>(abouts, HttpStatus.OK);
     }
 
    
@@ -45,4 +46,9 @@ public class AboutController {
         return new ResponseEntity<>(nuevaAbout, HttpStatus.CREATED);
     }
     
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<?> borrarExperiencia(@PathVariable("id") Long id){
+        aboutService.borrarAbout(id);
+        return new ResponseEntity<>(HttpStatus.OK);
+}
 }

@@ -5,6 +5,7 @@
 package com.proyecto1.demo.Entity;
 
 
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,7 +16,6 @@ import javax.persistence.Id;
 public class About {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(nullable = false, updatable = false)
     private Long idAb;
     @Column( length = 10000)
     private String sobreMi;
@@ -23,16 +23,16 @@ public class About {
     public About() {
     }
 
-    public About(Long id, String sobreMi) {
+    public About(Long idAb, String sobreMi) {
         this.idAb = idAb;
         this.sobreMi = sobreMi;
     }
 
-    public Long getId() {
+    public Long getIdAb() {
         return idAb;
     }
 
-    public void setId(Long id) {
+    public void setIdAb(Long idAb) {
         this.idAb = idAb;
     }
 
@@ -44,8 +44,6 @@ public class About {
         this.sobreMi = sobreMi;
     }
 
-  
-
-  
+   
     
 }
