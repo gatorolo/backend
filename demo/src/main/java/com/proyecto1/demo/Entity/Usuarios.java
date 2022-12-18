@@ -27,7 +27,9 @@ public class Usuarios  implements Serializable {
     private List<Skills> skillList;
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "idAb")
     private List<About> aboutList;
-
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "idSoc")
+    private List<Social> socialList;
+    
     public Usuarios() {
     }
 
