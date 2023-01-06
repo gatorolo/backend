@@ -16,9 +16,9 @@ public class Skills {
     public Skills() {
     }
 
-    public Skills(Long idSkill, String nombreSkill, int porcentajeSkill) {
+    public Skills(Long idSkill, String NombreSkill, int porcentajeSkill) {
         this.idSkill = idSkill;
-        NombreSkill = nombreSkill;
+        this.NombreSkill = NombreSkill;
         this.porcentajeSkill = porcentajeSkill;
     }
 
@@ -34,8 +34,8 @@ public class Skills {
         return NombreSkill;
     }
 
-    public void setNombreSkill(String nombreSkill) {
-        NombreSkill = nombreSkill;
+    public void setNombreSkill(String NombreSkill) {
+        this.NombreSkill = NombreSkill;
     }
 
     public int getPorcentajeSkill() {
@@ -45,4 +45,6 @@ public class Skills {
     public void setPorcentajeSkill(int porcentajeSkill) {
         this.porcentajeSkill = porcentajeSkill;
     }
+
+    
 }
