@@ -4,6 +4,7 @@
  */
 package com.proyecto1.demo.Entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,9 +16,13 @@ public class Social {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long idSoc;
+     @Column( length = 1000)
     private String faceSocial;
+     @Column( length = 1000)
     private String instaSocial;
+      @Column( length = 1000)
     private String gitSocial;
+    @Column( length = 1000)
     private String linkSocial;
 
     public Social() {
