@@ -12,9 +12,9 @@ import javax.persistence.Id;
 
 @Entity
 public class Social {
-    
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+
     private long idSoc;
      @Column( length = 1000)
     private String faceSocial;
@@ -75,6 +75,7 @@ public class Social {
     public void setLinkSocial(String linkSocial) {
         this.linkSocial = linkSocial;
     }
+
     
     
 }
