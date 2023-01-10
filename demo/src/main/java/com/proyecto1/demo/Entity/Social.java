@@ -24,16 +24,23 @@ public class Social {
     private String gitSocial;
     @Column( length = 1000)
     private String linkSocial;
+    @Column( length = 1000)
+    private String twitSocial;
+    @Column( length = 1000)
+    private String whatsSocial;
+    
 
     public Social() {
     }
 
-    public Social(long idSoc, String faceSocial, String instaSocial, String gitSocial, String linkSocial) {
+    public Social(long idSoc, String faceSocial, String instaSocial, String gitSocial, String linkSocial, String twitSocial, String whatsSocial) {
         this.idSoc = idSoc;
         this.faceSocial = faceSocial;
         this.instaSocial = instaSocial;
         this.gitSocial = gitSocial;
         this.linkSocial = linkSocial;
+        this.twitSocial = twitSocial;
+        this.whatsSocial = whatsSocial;
     }
 
     public long getIdSoc() {
@@ -75,6 +82,24 @@ public class Social {
     public void setLinkSocial(String linkSocial) {
         this.linkSocial = linkSocial;
     }
+
+    public String getTwitSocial() {
+        return twitSocial;
+    }
+
+    public void setTwitSocial(String twitSocial) {
+        this.twitSocial = twitSocial;
+    }
+
+    public String getWhatsSocial() {
+        return whatsSocial;
+    }
+
+    public void setWhatsSocial(String whatsSocial) {
+        this.whatsSocial = whatsSocial;
+    }
+
+    
 
     
     
